@@ -1,0 +1,14 @@
+.wrapper {
+    display: grid;
+    width: 912px;
+    grid-template-columns: 182.4px 182.4px 182.4px 182.4px 182.4px;
+    border-bottom: rgba(#000000, 0.12) 1px solid;
+}
+.valueBlock {
+    padding: 16px 10px;
+}
+.valueText {
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+}

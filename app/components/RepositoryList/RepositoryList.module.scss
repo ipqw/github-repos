@@ -1,0 +1,14 @@
+.columnLabels {
+    display: grid;
+    grid-template-columns: 182.4px 182.4px 182.4px 182.4px 182.4px;
+}
+.columnLabelBlock {
+    padding: 16px 10px;
+    height: 24px;
+}
+.columnLabelText {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(#000000, 0.87);
+}

@@ -1,18 +1,22 @@
 "use client";
-import { FC, useEffect } from "react";
+import { FC } from "react";
 import styles from "./page.module.scss";
-import SearchResults from "./components/SearchResults";
 import { useAppSelector } from "./store/hooks";
 import { repositoryApiSlice } from "@/app/store/services/repositoryApiSlice";
+import SearchResults from "./components/SearchResults";
 
 const Home: FC = () => {
     const { query } = useAppSelector((state) => state.query);
-    const { data } = repositoryApiSlice.useGetRepositoriesQuery({ query });
+    const { data } = repositoryApiSlice.useGetRepositoriesQuery(
+        { query },
+        { skip: query ? false : true },
+    );
     return (
         <main className={styles.main}>
             <p style={{ display: data ? "none" : "block" }} className={styles.welcomeText}>
                 Добро пожаловать
             </p>
+            <SearchResults repositories={data?.items || []} isVisible={data ? true : false} />
         </main>
     );
 };
