@@ -2,6 +2,21 @@
     background-color: #00838f;
     width: 100%;
 }
+.contentBlock {
+    padding: 19px 32px;
+    display: flex;
+    column-gap: 8px;
+}
+.findButton {
+    background-color: #2196f3;
+    border-radius: 4px;
+    padding: 8px 22px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 26px;
+    font-family: "Roboto", sans-serif;
+    color: #ffffff;
+}
 .input {
     width: 100%;
     max-width: 912px;
@@ -19,19 +34,4 @@
     &:focus {
         outline: none;
     }
-}
-.contentBlock {
-    padding: 19px 32px;
-    display: flex;
-    column-gap: 8px;
-}
-.findButton {
-    background-color: #2196f3;
-    border-radius: 4px;
-    padding: 8px 22px;
-    font-weight: 500;
-    font-size: 15px;
-    line-height: 26px;
-    font-family: "Roboto", sans-serif;
-    color: #ffffff;
 }
