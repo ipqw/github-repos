@@ -1,0 +1,37 @@
+.wrapper {
+    background-color: #00838f;
+    width: 100%;
+}
+.input {
+    width: 100%;
+    max-width: 912px;
+    padding: 9px 16px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 500;
+    background-color: #f2f2f2;
+    font-family: "Roboto", sans-serif;
+    border-radius: 4px;
+    &::placeholder {
+        font-style: italic;
+        font-weight: 400;
+    }
+    &:focus {
+        outline: none;
+    }
+}
+.contentBlock {
+    padding: 19px 32px;
+    display: flex;
+    column-gap: 8px;
+}
+.findButton {
+    background-color: #2196f3;
+    border-radius: 4px;
+    padding: 8px 22px;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 26px;
+    font-family: "Roboto", sans-serif;
+    color: #ffffff;
+}
