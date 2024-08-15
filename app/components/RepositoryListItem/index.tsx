@@ -1,13 +1,24 @@
 import { IItem } from "@/app/types";
-import { FC } from "react";
+import { Dispatch, FC, SetStateAction } from "react";
 import styles from "./RepositoryListItem.module.scss";
 interface IProps {
     repository: IItem;
+    selectedRepository: number;
+    setSelectedRepository: Dispatch<SetStateAction<number>>;
 }
 
-const RepositoryListItem: FC<IProps> = ({ repository }) => {
+const RepositoryListItem: FC<IProps> = ({
+    repository,
+    selectedRepository,
+    setSelectedRepository,
+}) => {
     return (
-        <div className={styles.wrapper}>
+        <div
+            style={{
+                backgroundColor: selectedRepository === repository.id ? "#2196f30a" : "#ffffff",
+            }}
+            className={styles.wrapper}
+            onClick={() => setSelectedRepository(repository.id)}>
             <div className={styles.valueBlock}>
                 <p className={styles.valueText}>{repository.name}</p>
             </div>

@@ -1,3 +1,87 @@
 .wrapper {
     width: 33%;
+    background-color: #f2f2f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.selectRepoText {
+    font-size: 14px;
+    font-weight: 400;
+    color: #4f4f4f;
+}
+.contentBlock {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 24px;
+    align-self: flex-start;
+    justify-self: flex-start;
+}
+.topBlock {
+    display: flex;
+}
+.title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 40px;
+    color: #000000;
+    margin-bottom: 16px;
+}
+.bottomBlock {
+    display: flex;
+    justify-content: space-between;
+}
+.leftBlock {
+    display: flex;
+    flex-direction: column;
+}
+.mainLanguage {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: #2196f3;
+    border-radius: 100px;
+    padding: 7px 10px;
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 16px;
+    width: fit-content;
+}
+.secondaryLanguage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 24px;
+    border-radius: 100px;
+    background-color: rgba(#000000, 0.08);
+    padding: 3px 10px;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    width: fit-content;
+}
+.secondaryLanguagesBlock {
+    display: flex;
+    column-gap: 8px;
+    margin-bottom: 24px;
+}
+.licence {
+    font-size: 14px;
+    font-weight: 400;
+    color: rgba(#000000, 0.87);
+}
+.rightBlock {
+    display: flex;
+    column-gap: 8px;
+    align-items: center;
+    height: fit-content;
+}
+.starCounter {
+    font-weight: 400;
+    font-size: 14px;
+    color: rgba(#000000, 0.87);
 }

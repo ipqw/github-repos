@@ -1,5 +1,5 @@
 import { IItem } from "@/app/types";
-import { FC, useState } from "react";
+import { Dispatch, FC, SetStateAction, useState } from "react";
 import RepositoryListItem from "../RepositoryListItem";
 import styles from "./RepositoryList.module.scss";
 import arrowIcon from "@/public/icons/arrow.svg";
@@ -9,9 +9,15 @@ import { setOrder, setSortParam } from "@/app/store/reducers/querySlice";
 
 interface IProps {
     repositories: IItem[];
+    selectedRepository: number;
+    setSelectedRepository: Dispatch<SetStateAction<number>>;
 }
 
-const RepositoryList: FC<IProps> = ({ repositories }) => {
+const RepositoryList: FC<IProps> = ({
+    repositories,
+    selectedRepository,
+    setSelectedRepository,
+}) => {
     const dispatch = useAppDispatch();
     const { sort, order } = useAppSelector((state) => state.query);
     return (
@@ -116,7 +122,14 @@ const RepositoryList: FC<IProps> = ({ repositories }) => {
                 </div>
             </div>
             {repositories.map((el, index) => {
-                return <RepositoryListItem key={index} repository={el} />;
+                return (
+                    <RepositoryListItem
+                        selectedRepository={selectedRepository}
+                        setSelectedRepository={setSelectedRepository}
+                        key={index}
+                        repository={el}
+                    />
+                );
             })}
         </div>
     );
