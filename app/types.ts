@@ -16,6 +16,7 @@ export interface IItem {
     license: ILicense;
     stargazers_count: number;
     updated_at: string;
+    languages_url: string;
 }
 
 export interface GitHubApiResponse {
