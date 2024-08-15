@@ -6,9 +6,9 @@ import { repositoryApiSlice } from "@/app/store/services/repositoryApiSlice";
 import SearchResults from "./components/SearchResults";
 
 const Home: FC = () => {
-    const { query } = useAppSelector((state) => state.query);
+    const { query, sort, order, per_page, page } = useAppSelector((state) => state.query);
     const { data } = repositoryApiSlice.useGetRepositoriesQuery(
-        { query },
+        { query, sort, order, per_page, page },
         { skip: query ? false : true },
     );
     return (

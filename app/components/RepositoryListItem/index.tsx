@@ -21,7 +21,9 @@ const RepositoryListItem: FC<IProps> = ({ repository }) => {
                 <p className={styles.valueText}>{repository.stargazers_count}</p>
             </div>
             <div className={styles.valueBlock}>
-                <p className={styles.valueText}>{repository.updated_at}</p>
+                <p className={styles.valueText}>
+                    {new Date(repository.updated_at).toLocaleDateString("ru")}
+                </p>
             </div>
         </div>
     );
