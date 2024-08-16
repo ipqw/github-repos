@@ -1,1 +1,1 @@
-github-repos-eight.vercel.app
+https://github-repos-eight.vercel.app
