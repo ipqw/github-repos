@@ -2,6 +2,7 @@ import { Dispatch, FC, SetStateAction } from "react";
 import RepositoryList from "../RepositoryList";
 import styles from "./RepositoryList.module.scss";
 import { IItem } from "@/app/types";
+import PagesNavigation from "../PagesNavigation";
 
 interface IProps {
     repositories: IItem[];
@@ -22,6 +23,7 @@ const SearchResultPages: FC<IProps> = ({
                 setSelectedRepository={setSelectedRepository}
                 repositories={repositories}
             />
+            <PagesNavigation />
         </div>
     );
 };

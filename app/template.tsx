@@ -8,7 +8,14 @@ interface IProps {
 
 const template: FC<IProps> = ({ children }) => {
     return (
-        <div style={{ height: "100vh", display: "flex", flexDirection: "column" }}>
+        <div
+            style={{
+                minHeight: "100vh",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                position: "relative",
+            }}>
             <Header />
             {children}
         </div>

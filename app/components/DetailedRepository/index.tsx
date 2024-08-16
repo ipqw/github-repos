@@ -33,7 +33,11 @@ const DetailedRepository: FC<IProps> = ({ selectedRepository }) => {
                 </div>
                 <div className={styles.bottomBlock}>
                     <aside className={styles.leftBlock}>
-                        <div className={styles.mainLanguage}>{repository?.language}</div>
+                        <div
+                            style={{ display: repository?.language ? "block" : "none" }}
+                            className={styles.mainLanguage}>
+                            {repository?.language}
+                        </div>
                         <div className={styles.secondaryLanguagesBlock}>
                             {stylizedLanguages.map((el, index) => {
                                 return (

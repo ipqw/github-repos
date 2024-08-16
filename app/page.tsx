@@ -12,12 +12,12 @@ const Home: FC = () => {
         { skip: query ? false : true },
     );
     return (
-        <main className={styles.main}>
+        <div className={styles.main}>
             <p style={{ display: data ? "none" : "block" }} className={styles.welcomeText}>
                 Добро пожаловать
             </p>
             <SearchResults repositories={data?.items || []} isVisible={data ? true : false} />
-        </main>
+        </div>
     );
 };
 

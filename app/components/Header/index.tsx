@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import styles from "./Header.module.scss";
-import { setQuery } from "@/app/store/reducers/querySlice";
+import { setPage, setQuery } from "@/app/store/reducers/querySlice";
 import { useAppDispatch } from "@/app/store/hooks";
 import { Button } from "@mui/material";
 
@@ -18,7 +18,10 @@ const Header: FC = () => {
                     className={styles.input}
                 />
                 <Button
-                    onClick={() => dispatch(setQuery(value))}
+                    onClick={() => {
+                        dispatch(setQuery(value));
+                        dispatch(setPage(1));
+                    }}
                     sx={{
                         backgroundColor: "#2196F3",
                         fontSize: 15,

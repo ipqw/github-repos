@@ -5,8 +5,8 @@ export interface IQuery {
     query: string;
     sort: "stars" | "" | "forks" | "help-wanted-issues" | "updated";
     order: "desc" | "asc";
-    per_page?: number;
-    page?: number;
+    per_page: number;
+    page: number;
 }
 
 const initialState: IQuery = {

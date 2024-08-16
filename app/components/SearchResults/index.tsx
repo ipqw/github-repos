@@ -1,6 +1,5 @@
 import { FC, useState } from "react";
 import DetailedRepository from "../DetailedRepository";
-import RepositoryList from "../SearchResultPages";
 import styles from "./SearchResults.module.scss";
 import SearchResultPages from "../SearchResultPages";
 import { IItem } from "@/app/types";

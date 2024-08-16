@@ -1,4 +1,4 @@
-import { GitHubApiResponse, IItem } from "@/app/types";
+import { GitHubApiResponse } from "@/app/types";
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import { IQuery } from "../reducers/querySlice";
 
